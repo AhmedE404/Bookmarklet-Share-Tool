@@ -28,7 +28,7 @@ This project uses 100% Vanilla JavaScript, HTML, and CSS. No package managers (n
 
 1. **Fork** the repository and **clone** it locally:
 ```bash
-   git clone https://github.com/YOUR-USERNAME/Bookmarklet-Share-Tool.git
+   git clone https://github.com/AhmedE404/Bookmarklet-Share-Tool.git
 
 ```
 
