@@ -13,6 +13,10 @@
   <a href="https://github.com/AhmedE404/Bookmarklet-Share-Tool/network/members"><img src="https://img.shields.io/github/forks/AhmedE404/Bookmarklet-Share-Tool?style=social" alt="GitHub forks"></a>
 </p>
 
+<p align="center">
+  🚀 <strong><a href="https://ahmede404.github.io/Bookmarklet-Share-Tool/" target="_blank">View Live Demo & Directory</a></strong> 🚀
+</p>
+
 An enterprise-grade, open-source platform designed to discover, create, test, and share JavaScript Bookmarklets. Built entirely with Vanilla JavaScript, it acts as both a **public directory** and a **developer builder environment**.
 
 ## ✨ Key Features
@@ -41,7 +45,7 @@ We welcome contributions! You don't need to touch the core HTML/CSS/JS to add yo
 1. **Fork** this repository.
 2. **Add your code:** Create a new file in the `bookmarklets/` folder (e.g., `my-awesome-tool.js`).
 3. **Register it:** Add your tool's metadata to `data/registry.json`:
-   ```json
+```json
    {
      "id": "my-awesome-tool",
      "title": "My Awesome Tool",

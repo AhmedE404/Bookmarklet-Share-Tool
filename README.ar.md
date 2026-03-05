@@ -13,6 +13,10 @@
   <a href="https://github.com/AhmedE404/Bookmarklet-Share-Tool/network/members"><img src="https://img.shields.io/github/forks/AhmedE404/Bookmarklet-Share-Tool?style=social" alt="تفرعات جيتهب"></a>
 </p>
 
+<p align="center">
+  🚀 <strong><a href="https://ahmede404.github.io/Bookmarklet-Share-Tool/" target="_blank">تصفح الموقع والدليل من هنا</a></strong> 🚀
+</p>
+
 منصة متطورة ومفتوحة المصدر مصممة لاكتشاف، إنشاء، اختبار، ومشاركة أدوات الجافاسكريبت المصغرة (Bookmarklets). مبنية بالكامل باستخدام الجافاسكريبت الخام (Vanilla JS)، وتعمل كـ **دليل عام (Directory)** و **بيئة تطوير (Builder)** في نفس الوقت.
 
 ## ✨ المميزات الأساسية
@@ -41,7 +45,7 @@
 1. قم بعمل **Fork** لهذا المستودع.
 2. **أضف كودك:** أنشئ ملفاً جديداً في مجلد `bookmarklets/` (مثال: `my-awesome-tool.js`).
 3. **سجل الأداة:** أضف بيانات أداتك إلى ملف الفهرس `data/registry.json`:
-   ```json
+```json
    {
      "id": "my-awesome-tool",
      "title": "اسم أداتك",
