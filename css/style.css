@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    overflow: hidden;
+}
+
+#installMode,
+#createMode {
+    display: none;
+    z-index: 10;
+}
+
+#installMode {
+    text-align: center;
+    user-select: none;
+}
+
+.btn-drag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px;
+    background-color: #111;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: grab;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.2s ease;
+}
+
+.btn-drag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-drag:active {
+    cursor: grabbing;
+}
+
+.hint {
+    margin-top: 24px;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+kbd {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: 13px;
+    color: #333;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    color: white;
+}
+
+.overlay.active {
+    opacity: 1;
+}
+
+.arrows {
+    font-size: 45px;
+    font-weight: 300;
+    letter-spacing: 15px;
+    animation: bounce 1s infinite;
+}
+
+.overlay-text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+#createMode {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    margin-top: 0;
+    color: #111;
+    font-size: 22px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 14px;
+    box-sizing: border-box;
+    direction: ltr;
+    text-align: left;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #111;
+}
+
+.btn-generate {
+    width: 100%;
+    padding: 14px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-generate:hover {
+    background: #333;
+}
+
+.result-box {
+    margin-top: 20px;
+    display: none;
+}
+
+.result-box input {
+    background: #fff;
+    cursor: copy;
+}
+
+.success-msg {
+    color: #00a400;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+}
+
+.edit-btn {
+    margin-top: 15px;
+    background: none;
+    border: none;
+    color: #0066cc;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+}
