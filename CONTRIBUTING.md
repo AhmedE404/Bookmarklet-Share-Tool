@@ -1,57 +1,52 @@
-# Contributing to Bookmarklet Forge
+# Contributing to Bookmarklet Forge & Directory
 
 First off, thank you for considering contributing to this project! It's people like you that make the open-source community such a great place to learn, inspire, and create.
 
-## 🛠️ Development Process
+Whether you want to add a new bookmarklet to the public directory or improve the core platform, this guide will help you get started.
 
-We use a standard GitHub flow for contributions:
+---
 
-1. **Fork** the repository to your own GitHub account.
-2. **Clone** the project to your local machine:
-   ```bash
-   git clone [https://github.com/YOUR-USERNAME/Bookmarklet-Share-Tool.git](https://github.com/YOUR-USERNAME/Bookmarklet-Share-Tool.git)
+## 🚀 Option 1: Adding a New Bookmarklet (The Easy Way)
+You do not need to modify any core HTML, CSS, or JS files to submit a new tool. The platform uses a dynamic **Registry Pattern**.
 
-```
+We have built an automated tool to generate your contribution files.
+1. Open the [Builder Page](https://AhmedE404.github.io/Bookmarklet-Share-Tool/builder/).
+2. Fill in your tool's details (Name, Category, Description, Author, GitHub Handle, and the JS Code).
+3. Click the **"Submit to Directory"** button.
+4. Follow the auto-generated **Contribution Guide** on the screen, which will instruct you to:
+   * Create a new `.js` file in the `bookmarklets/` folder and paste your code.
+   * Append the generated JSON block to the `data/registry.json` array.
+5. Commit your changes and open a **Pull Request**.
 
-3. **Create a Branch** for your feature or bug fix:
+---
+
+## 💻 Option 2: Contributing to the Core Platform
+If you want to fix bugs, add new features to the UI, or add new languages, please follow these guidelines:
+
+### Development Setup
+This project uses 100% Vanilla JavaScript, HTML, and CSS. No package managers (npm/yarn) or build tools are required.
+
+1. **Fork** the repository and **clone** it locally:
 ```bash
-git checkout -b feature/your-amazing-feature
+   git clone https://github.com/YOUR-USERNAME/Bookmarklet-Share-Tool.git
 
 ```
 
+2. Open the project folder in your preferred code editor.
+3. Use a local server (like the VS Code "Live Server" extension) to run the project. *Note: Opening the files directly via `file://` might block the `fetch()` API used for reading JSON files due to CORS policies.*
 
-*Use naming conventions like `feature/xxx`, `bugfix/xxx`, or `docs/xxx`.*
-4. **Make your changes**. Ensure your code follows the existing style:
-* Use Vanilla JavaScript (no frameworks/libraries unless explicitly discussed).
-* Keep CSS contained within `css/style.css`.
-* Ensure the UI remains minimalist and responsive.
+### Project Architecture & Rules
 
+* **DRY Principle:** Core logic shared across pages (i18n, compression, toasts) lives in `js/shared.js`. Do not duplicate logic in `directory.js` or `builder.js`.
+* **Adding Languages:** To add a new language, create a new `{lang}.json` file in the `locales/` directory, and add the language key to the `supportedLangs` object inside `js/shared.js`.
+* **Styling:** Keep styles modular. `shared.css` is for global UI elements (navbar, buttons), `directory.css` is for the main data table, and `builder.css` is for the builder forms.
+* **No External Libraries:** Please do not introduce third-party libraries or frameworks. The platform must remain lightweight and dependency-free.
 
-5. **Test your changes** locally by opening `index.html` in a modern browser and testing both the hash generation and installation flows.
-6. **Commit your changes** with a clear and descriptive commit message:
-```bash
-git commit -m "Add: Auto-minification for JS code before compression"
+### Submitting Your Pull Request
 
-```
+1. Create a branch for your feature (`git checkout -b feature/amazing-feature`).
+2. Commit your changes with clear, descriptive messages (`git commit -m "feat: added dark mode toggle to UI"`).
+3. Push to your branch (`git push origin feature/amazing-feature`).
+4. Open a Pull Request against the `main` branch.
 
-
-7. **Push to the Branch**:
-```bash
-git push origin feature/your-amazing-feature
-
-```
-
-
-8. **Open a Pull Request (PR)** against the `main` branch of this repository. Provide a clear description of what you've changed and why.
-
-## 🐛 Reporting Bugs
-
-If you find a bug, please open an issue and include:
-
-* Your operating system and browser version.
-* The steps to reproduce the bug.
-* The expected behavior vs. the actual behavior.
-* (Optional) The JavaScript code you were trying to compress.
-
-Thank you for your contribution!
-
+Thank you for contributing!

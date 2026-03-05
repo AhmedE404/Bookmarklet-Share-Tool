@@ -1,49 +1,81 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أدوات المتصفح</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title data-i18n="pageTitle">Bookmarklet Directory</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/directory.css">
+    <meta name="description"
+        content="A powerful, open-source directory and builder for JavaScript bookmarklets. Discover, test, and share tools directly in your browser.">
+    <meta name="keywords" content="bookmarklets, javascript tools, browser automation, developer tools, open source">
+    <meta name="author" content="Ahmed">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bookmarklet Forge & Directory">
+    <meta property="og:description" content="Discover, test, and share useful JavaScript bookmarklets effortlessly.">
+    <meta property="og:url" content="https://AhmedE404.github.io/Bookmarklet-Share-Tool/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bookmarklet Forge & Directory">
+    <meta name="twitter:description" content="Discover, test, and share useful JavaScript bookmarklets effortlessly.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <div class="overlay" id="dragOverlay">
-        <div class="arrows">↑ ↑ ↑</div>
-        <div class="overlay-text">أفلت الزر هنا في شريط الإشارات المرجعية</div>
-    </div>
-
-    <div id="installMode">
-        <a href="#" class="btn-drag" id="toolBtn">اسحب هذا لشريط المفضلة</a>
-        <div class="hint">
-            اسحب الزر للأعلى.<br>
-            لإظهار الشريط اضغط <kbd id="ctrlKey">Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>
-        </div>
-        <button class="edit-btn" id="editBtn">✏️ تعديل كود الأداة</button>
-    </div>
-
-    <div id="createMode">
-        <h2>🛠️ صانع البوكماركلت</h2>
-        <div class="form-group">
-            <label>اسم الأداة (اختياري)</label>
-            <input type="text" id="bmName" placeholder="مثال: أداة سحب الصور" dir="rtl"
-                style="text-align: right; font-family: inherit;">
-        </div>
-        <div class="form-group">
-            <label>كود الجافاسكريبت</label>
-            <textarea id="bmCode" placeholder="(async () => { ... })();"></textarea>
-        </div>
-        <button class="btn-generate" id="generateBtn">توليد الرابط المضغوط</button>
-        <div class="result-box" id="resultBox">
-            <label>رابط المشاركة (اضغط للنسخ):</label>
-            <input type="text" id="outputUrl" readonly title="اضغط لنسخ الرابط">
-            <div class="success-msg" id="successMsg">تم نسخ الرابط بنجاح!</div>
+        <div class="arrows">&#8593; &#8593; &#8593;</div>
+        <h2 data-i18n="dropHint">Drop in Bookmarks Bar</h2>
+        <div class="hint-text" data-i18n="hintText">
+            To show the bookmarks bar, press <kbd id="ctrlKey">Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>
         </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <nav class="top-nav">
+        <div class="brand">
+            <h1 data-i18n="headerTitle">Bookmarklet Forge</h1>
+            <span class="badge" data-i18n="headerBadge">favlet</span>
+        </div>
+        <div class="nav-actions">
+            <select id="langSelect" class="lang-select"></select>
+            <a href="/builder" class="btn-primary" data-i18n="createBtn">Create / Submit</a>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="toolbar">
+            <input type="text" id="searchInput" class="search-input" data-i18n-placeholder="searchPlaceholder"
+                placeholder="Search by name or description...">
+            <div id="activeFilters" class="active-filters"></div>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th data-sort="title"><span data-i18n="colName">Name</span> <span class="sort-icon"></span></th>
+                        <th data-i18n="colDesc">Description</th>
+                        <th data-sort="category"><span data-i18n="colCat">Category</span> <span
+                                class="sort-icon"></span></th>
+                        <th data-sort="author"><span data-i18n="colAuthor">Author</span> <span class="sort-icon"></span>
+                        </th>
+                        <th data-sort="added_date"><span data-i18n="colDate">Date</span> <span class="sort-icon"></span>
+                        </th>
+                        <th data-i18n="colAction">Install</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="js/shared.js"></script>
+    <script src="js/directory.js"></script>
 </body>
 
 </html>

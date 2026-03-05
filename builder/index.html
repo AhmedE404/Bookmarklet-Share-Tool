@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="builderTitle">Bookmarklet Builder</title>
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/builder.css">
+    <meta name="description"
+        content="A powerful, open-source directory and builder for JavaScript bookmarklets. Discover, test, and share tools directly in your browser.">
+    <meta name="keywords" content="bookmarklets, javascript tools, browser automation, developer tools, open source">
+    <meta name="author" content="Ahmed">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bookmarklet Forge & Directory">
+    <meta property="og:description" content="Discover, test, and share useful JavaScript bookmarklets effortlessly.">
+    <meta property="og:url" content="https://AhmedE404.github.io/Bookmarklet-Share-Tool/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bookmarklet Forge & Directory">
+    <meta name="twitter:description" content="Discover, test, and share useful JavaScript bookmarklets effortlessly.">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="overlay" id="dragOverlay">
+        <div class="arrows">&#8593; &#8593; &#8593;</div>
+        <h2 data-i18n="dropHint">Drop in Bookmarks Bar</h2>
+        <div class="hint-text" data-i18n="hintText">
+            To show the bookmarks bar, press <kbd id="ctrlKey">Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Copied!</div>
+
+    <nav class="top-nav">
+        <div class="brand">
+            <a href="../" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                <h1 data-i18n="headerTitle">Bookmarklet Forge</h1>
+                <span class="badge" data-i18n="headerBadge">favlet</span>
+            </a>
+        </div>
+        <div class="nav-actions">
+            <select id="langSelect" class="lang-select"></select>
+            <a href="../" class="btn-primary" data-i18n="backToDir">&larr; Back to Directory</a>
+        </div>
+    </nav>
+
+    <main id="installMode" class="builder-container">
+        <div class="install-card">
+            <div class="install-meta" id="installMeta"
+                style="display: flex; gap: 10px; margin-bottom: 15px; justify-content: center;">
+                <span class="badge" id="installCat">Category</span>
+                <span class="badge" id="installAuthor" style="background: #e3f2fd; color: #0d47a1;">@Author</span>
+            </div>
+
+            <h2 id="installTitle" data-i18n="installTitle">Install Bookmarklet</h2>
+            <p id="installDesc" style="color: #6c757d; margin-bottom: 30px;"></p>
+
+            <a href="#" class="btn-drag-large" id="toolBtn" onclick="event.preventDefault()">
+                <span class="visually-hidden" id="toolRealName"></span>
+            </a>
+            <!-- <a href="#" class="btn-drag-large" id="toolBtn" data-i18n="dragBtn" onclick="event.preventDefault()">Drag Me</a> -->
+
+            <div class="hint-text" data-i18n="hintText" style="margin-top: 0; margin-bottom: 24px;">
+                To show the bookmarks bar, press <kbd id="ctrlKeyInstall">Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>
+            </div>
+
+            <div style="border-top: 1px solid var(--border-light); padding-top: 20px;">
+                <button class="btn-submit" id="editBtn" data-i18n="btnRemix"
+                    style="width: 100%; background: var(--bg-color); color: var(--text-main); border-color: var(--border-color);">Remix
+                    / Edit Tool</button>
+            </div>
+        </div>
+    </main>
+
+    <main id="createMode" class="builder-container">
+        <div class="builder-header">
+            <h2 data-i18n="builderTitle">Bookmarklet Builder</h2>
+            <p data-i18n="builderDesc">Write, test, and share your tool, or submit it to the open-source directory.</p>
+        </div>
+
+        <div class="form-card">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="bmName" data-i18n="colName">Name</label>
+                    <input type="text" id="bmName" class="form-control" data-i18n-placeholder="toolNamePlaceholder"
+                        placeholder="e.g., Dark Mode Toggle">
+                </div>
+                <div class="form-group">
+                    <label for="bmCat" data-i18n="toolCatLabel">Category</label>
+                    <input type="text" id="bmCat" class="form-control" placeholder="e.g., Media, Productivity">
+                </div>
+                <div class="form-group full-width">
+                    <label for="bmDesc" data-i18n="toolDescLabel">Short Description</label>
+                    <input type="text" id="bmDesc" class="form-control" placeholder="...">
+                </div>
+                <div class="form-group">
+                    <label for="bmAuthor" data-i18n="authorNameLabel">Author Name</label>
+                    <input type="text" id="bmAuthor" class="form-control" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="bmGithub" data-i18n="authorGithubLabel">GitHub Handle</label>
+                    <input type="text" id="bmGithub" class="form-control" placeholder="johndoe">
+                </div>
+                <div class="form-group full-width">
+                    <label for="bmCode" data-i18n="codeLabel">JavaScript Code</label>
+                    <textarea id="bmCode" class="form-control" data-i18n-placeholder="codePlaceholder"
+                        placeholder="(async () => { ... })();"></textarea>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="btnSubmit" class="btn-submit" data-i18n="btnSubmit">Submit to Directory</button>
+                <button id="btnShare" class="btn-share" data-i18n="btnShare">Generate Shareable Link</button>
+            </div>
+
+            <div id="shareResult" class="result-section">
+                <label data-i18n="shareLabel" style="font-weight: 600; font-size: 13px;">Shareable Link (Click to
+                    Copy):</label>
+                <input type="text" id="outputUrl" class="form-control" readonly style="margin-top: 8px; cursor: copy;">
+            </div>
+
+            <div id="prGuide" class="result-section">
+                <h3 data-i18n="prGuideTitle" style="margin-top: 0; color: #212529;">Contribution Guide</h3>
+
+                <div class="guide-step">
+                    <h4 data-i18n="prStep1">1. Create the JavaScript File</h4>
+                    <p data-i18n="prStep1Desc">Create a new file in the <code>bookmarklets/</code> folder and paste your
+                        code:</p>
+                    <div class="snippet-box">
+                        <button class="btn-copy-code" data-target="codeSnippet">Copy</button>
+                        <code id="codeSnippet"></code>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <h4 data-i18n="prStep2">2. Update the Registry</h4>
+                    <p data-i18n="prStep2Desc">Add this block to <code>data/registry.json</code>:</p>
+                    <div class="snippet-box">
+                        <button class="btn-copy-code" data-target="jsonSnippet">Copy</button>
+                        <code id="jsonSnippet"></code>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <h4 data-i18n="prStep3">3. Open a Pull Request</h4>
+                    <p data-i18n="prStep3Desc">Commit your changes and open a Pull Request to the main repository.</p>
+                    <a href="https://github.com/AhmedE404/Bookmarklet-Share-Tool" target="_blank" class="btn-primary"
+                        style="display: inline-block; margin-top: 12px;" data-i18n="btnOpenRepo">Open GitHub
+                        Repository</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/shared.js"></script>
+    <script src="../js/builder.js"></script>
+</body>
+
+</html>

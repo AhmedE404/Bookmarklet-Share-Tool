@@ -1,0 +1,266 @@
+[
+    {
+        "id": "image-scraper",
+        "title": "Image Scraper",
+        "description": "Extracts all images from the current page and prepares them in a print-ready PDF layout.",
+        "category": "Media",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/image-scraper.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "dark-mode-force",
+        "title": "Force Dark Mode",
+        "description": "Inverts the colors of any website to simulate a dark mode experience.",
+        "category": "Accessibility",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/dark-mode.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "youtube-all-in-one",
+        "title": "مجمع يوتيوب",
+        "description": "إظهار الكلمات المفتاحية، الدسلايك، تخطي الإعلانات، وتغيير السرعة.",
+        "category": "YouTube",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/youtube-all-in-one.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "youtube-downloader",
+        "title": "التحميل من يوتيوب",
+        "description": "تحميل الفيديو بجودات مختلفة (يتطلب تغيير User-Agent إلى Safari Mac للمتصفحات الأخرى).",
+        "category": "YouTube",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/youtube-downloader.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "youtube-ad-link",
+        "title": "جلب رابط الإعلان الحالي",
+        "description": "يجلب رابط فيديو الإعلان (الغير مدرج) الذي يُعرض حالياً على يوتيوب.",
+        "category": "YouTube",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/youtube-ad-link.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "youtube-all-ads",
+        "title": "جلب جميع الإعلانات",
+        "description": "يجلب روابط جميع الإعلانات التي عُرضت في صفحة يوتيوب الحالية.",
+        "category": "YouTube",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/youtube-all-ads.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "text-direction-toggle",
+        "title": "تبديل اتجاه النصوص",
+        "description": "يبدل اتجاه الصفحة (RTL / LTR) لحل مشكلة اللغات المختلطة.",
+        "category": "Reading Tools",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/text-direction-toggle.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "quick-translate",
+        "title": "ترجمة النص المحدد",
+        "description": "حدد أي نص في الصفحة واضغط لترجمته فوراً عبر ترجمة جوجل.",
+        "category": "Reading Tools",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/quick-translate.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "auto-scroll",
+        "title": "التمرير التلقائي",
+        "description": "تشغيل/إيقاف التمرير التلقائي للصفحة للقراءة المريحة (يمكن تعديل السرعة من الكود).",
+        "category": "Reading Tools",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/auto-scroll.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "universal-dark-mode",
+        "title": "تفعيل الوضع الليلي",
+        "description": "يفرض وضعاً ليلياً مريحاً للعين على أي موقع ويب.",
+        "category": "General",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/universal-dark-mode.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "copy-all-text",
+        "title": "نسخ نصوص الصفحة",
+        "description": "ينسخ جميع النصوص الموجودة في الصفحة الحالية إلى الحافظة.",
+        "category": "General",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/copy-all-text.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "video-speed-up",
+        "title": "تسريع الفيديو (3x)",
+        "description": "يضاعف سرعة أي فيديو يعمل في الصفحة الحالية (يمكن تعديل السرعة من الكود).",
+        "category": "General",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/video-speed-up.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "youtube-manual-skip-all",
+        "title": "مجمع يوتيوب (تخطي يدوي)",
+        "description": "نفس ميزات المجمع العادي، لكن التخطي للإعلانات يتم يدوياً بالضغط على زر Enter.",
+        "category": "YouTube",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/youtube-manual-skip-all.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "keyboard-shortcuts-fix",
+        "title": "إصلاح اختصارات الكيبورد",
+        "description": "يسمح باستخدام اختصارات لوحة المفاتيح الإنجليزية (مثل J, K, L في يوتيوب) حتى لو كانت لغة الكتابة عربية.",
+        "category": "General",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/keyboard-shortcuts-fix.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "open-multiple-urls",
+        "title": "فتح عدة روابط معاً",
+        "description": "أدخل مجموعة من الروابط مفصولة بمسافة، وسيتم فتحها جميعاً في نوافذ جديدة.",
+        "category": "Productivity",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/open-multiple-urls.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "decode-double-encryption",
+        "title": "فك التشفير المزدوج",
+        "description": "يفك تشفير النصوص أو الروابط المشفرة بتشفير مزدوج (URI + Base64).",
+        "category": "Developer Tools",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/decode-double-encryption.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "youtube-thumbnail-grabber",
+        "title": "تحميل صورة يوتيوب",
+        "description": "يستخرج صورة العرض (الـ Thumbnail) بأعلى جودة للفيديو المفتوح حالياً ويفتحها في نافذة جديدة.",
+        "category": "YouTube",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/youtube-thumbnail-grabber.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "video-controls-toggle",
+        "title": "إظهار/إخفاء تحكم الفيديو",
+        "description": "يظهر أزرار التحكم الافتراضية لأي فيديو على الصفحة، مفيد للمواقع التي تخفي زر التحميل أو التقديم.",
+        "category": "Media",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/video-controls-toggle.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "kill-sticky-headers",
+        "title": "إزالة القوائم المزعجة",
+        "description": "يحذف أي قوائم أو أشرطة ثابتة (Sticky Headers) تأخذ مساحة من الشاشة أثناء القراءة.",
+        "category": "Reading Tools",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/kill-sticky-headers.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "picture-in-picture",
+        "title": "وضع صورة في صورة (PiP)",
+        "description": "يجبر أي فيديو على العمل في نافذة عائمة خارج المتصفح لتشاهده أثناء عملك على تطبيقات أخرى.",
+        "category": "Media",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/picture-in-picture.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "table-scraper-csv",
+        "title": "سحب الجداول (Scraper)",
+        "description": "يبحث عن أي جدول بيانات (Table) في الصفحة، يحوله إلى صيغة CSV وينسخه للحافظة لتلصقه في إكسيل مباشرة.",
+        "category": "Developer Tools",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/table-scraper-csv.js",
+        "added_date": "2026-03-05"
+    },
+    {
+        "id": "edit-any-page",
+        "title": "تعديل نصوص الصفحة",
+        "description": "يحول أي صفحة ويب إلى محرر نصوص! مفيد جداً لأخذ سكرين شوت وهمية أو تعديل النصوص للتجربة.",
+        "category": "Productivity",
+        "author": {
+            "name": "Ahmed",
+            "github": "AhmedE404"
+        },
+        "file": "bookmarklets/edit-any-page.js",
+        "added_date": "2026-03-05"
+    }
+]
